@@ -1,12 +1,14 @@
 import sqlite3  
 
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route("/bem_vindo")
 def bem_vindo():
-    return "<h2>SE TEM DOR DE CUTUVELO, TÁ DEVENDO</h2>"
+    return "<h2>Bem Vindo!</h2>"
 
 def init_db():
 
